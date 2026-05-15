@@ -447,13 +447,13 @@ const About = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-6 mt-12">
-              <div className="bg-bg-light p-6 border-l-2 border-orange">
-                <div className="font-display text-4xl text-white mb-1">100%</div>
+            <div className="grid grid-cols-2 gap-4 sm:gap-6 mt-12">
+              <div className="bg-bg-light p-4 sm:p-6 border-l-2 border-orange">
+                <div className="font-display text-2xl sm:text-4xl text-white mb-1">100%</div>
                 <div className="font-mono text-[10px] text-orange uppercase tracking-wider">Zaangażowania</div>
               </div>
-              <div className="bg-bg-light p-6 border-l-2 border-red">
-                <div className="font-display text-4xl text-white mb-1">PROFESJONALNY</div>
+              <div className="bg-bg-light p-4 sm:p-6 border-l-2 border-red">
+                <div className="font-display text-lg sm:text-2xl lg:text-4xl text-white mb-1 break-words">PROFESJONALNY</div>
                 <div className="font-mono text-[10px] text-red uppercase tracking-wider">Sprzęt Diagnostyczny</div>
               </div>
             </div>
