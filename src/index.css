@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bebas Neue", sans-serif;
+  --font-subheading: "Barlow Condensed", sans-serif;
+  --font-body: "Barlow", sans-serif;
+  --font-mono: "DM Mono", monospace;
+
+  --color-bg: #0D0D0D;
+  --color-bg-section: #141414;
+  --color-bg-light: #1E1E1E;
+  --color-red: #D92B2B;
+  --color-red-deep: #A01F1F;
+  --color-orange: #F26419;
+  --color-orange-light: #FF8C42;
+  --color-chrome: #C0C0C0;
+  --color-chrome-dark: #6E6E6E;
+  --color-text: #F5F5F5;
+  --color-text-muted: #9A9A9A;
+  
+  --background-gradient: linear-gradient(135deg, #D92B2B, #F26419);
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-body;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-white uppercase;
+  }
+}
+
+@layer components {
+  .carbon-fiber {
+    background: 
+      repeating-linear-gradient(45deg, rgba(20,20,20,0.4) 0px, rgba(20,20,20,0.4) 4px, rgba(13,13,13,0.4) 4px, rgba(13,13,13,0.4) 8px),
+      var(--color-bg-section);
+  }
+
+  .grid-overlay {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+
+  .brushed-metal {
+    background: 
+      repeating-linear-gradient(
+        90deg,
+        rgba(192, 192, 192, 0.03) 0px,
+        rgba(192, 192, 192, 0.03) 1px,
+        transparent 1px,
+        transparent 20px
+      ),
+      var(--color-bg-light);
+  }
+
+  .angled-divider-top {
+    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .angled-divider-bottom {
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  }
+
+  .section-accent-line {
+    @apply h-[3px] w-24 bg-linear-to-r from-red to-orange mb-8;
+  }
+
+  .garage-card {
+    @apply bg-bg-light border-l-4 border-red rounded-[6px] p-6 transition-all duration-300;
+  }
+
+  .garage-card:hover {
+    @apply shadow-[0_0_20px_rgba(217,43,43,0.3)];
+  }
+
+  .btn-primary {
+    @apply bg-linear-to-r from-red to-orange text-white font-subheading uppercase text-lg px-8 py-3 rounded-[6px] tracking-wider transition-all duration-300 hover:scale-105 active:scale-95;
+  }
+
+  .nav-link {
+    @apply font-subheading uppercase text-sm tracking-widest text-text-muted hover:text-white transition-colors relative;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute -bottom-1 left-0 w-0 h-[2px] bg-linear-to-r from-red to-orange transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}

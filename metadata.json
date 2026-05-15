@@ -1,0 +1,8 @@
+{
+  "name": "AutoWorks Serwis Samochodowy",
+  "description": "Profesjonalny serwis samochodowy w Gniewomierowicach. Naprawy mechaniczne, diagnostyka i serwis klimatyzacji.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
